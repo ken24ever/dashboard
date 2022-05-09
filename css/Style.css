@@ -1,0 +1,45 @@
+/* body {
+    background-color: white;
+    text-align: center; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+
+}
+
+input[type=button]{
+    background-color: lightblue;
+    color: black;
+} */
+
+body {
+    background-color: #a9a9a9;
+    font-family:Tahoma;
+}
+
+div{
+    height: 380px;
+    width: 300px;
+    margin:20px auto;
+    padding:12px 6px 12px;
+    background-color: black;
+}
+
+form{
+    border:1px solid black;
+    text-align: center; 
+    padding: 12px 0;
+    background-color: #9f6060
+}
+
+#display{
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;;
+}
+
+input[type=button]{
+    padding:12px 12px;
+    background-color: steelblue;
+    color: white;
+}
+

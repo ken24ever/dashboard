@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/photoGallery.css'>
+    <script src='main.js'></script>
+    <style>
+        .flex_container{
+            display: flex;
+            background-color:white;
+          
+           
+        }
+        .flex_item1{
+            background-color: #f1f1f1;
+  margin: 0px;
+  padding: 10px;
+  font-size: 30px;
+  flex: 2;
+  border:1px solid darkgrey;
+  border-radius: 4px;
+
+}
+.flex_item2{
+            background-color: #f1f1f1;
+            margin: 0px;
+  padding: 10px;
+  font-size: 30px;
+  flex:8;
+  border-radius: 4px;
+  border:1px solid darkgrey;
+}
+.flex_item3{
+            background-color: #f1f1f1;
+  margin: 0px;
+  padding: 10px;
+  font-size: 30px;
+  flex:2;
+  flex-basis: 60px;
+  border-radius: 4px;
+  border:1px solid darkgrey;
+
+} 
+
+ @media screen and (max-width: 600px) {
+
+    .flex_container{
+            display: flex;
+            background-color:white;
+            padding: 10px;
+            flex-direction: column;
+           
+        }
+        .flex_item1{
+            background-color: #f1f1f1;
+  margin: 0px;
+  padding: 10px;
+  font-size: 30px;
+  flex: 2;
+  order: 2;
+  border:1px solid darkgrey;
+  border-radius: 4px;
+
+}
+.flex_item2{
+            background-color: #f1f1f1;
+            margin: 0px;
+  padding: 10px;
+  font-size: 30px;
+  flex:6;
+  order: 1;
+  border-radius: 4px;
+  border:1px solid darkgrey;
+}
+.flex_item3{
+            background-color: #f1f1f1;
+  margin: 0px;
+  padding: 10px;
+  font-size: 30px;
+  flex:2;
+  order: 3;
+  flex-basis: 60px;
+  border-radius: 4px;
+  border:1px solid darkgrey;
+
+} 
+
+} 
+        
+    </style>
+</head>
+<body>
+
+    <div  class="flex_container">
+    <div class="flex_item1"> 
+        <p><u>News Feeds</u></p>
+
+        <p class="news">
+                Top Nigerian gosper singer died from domestic violence
+        </p>
+
+    </div><!--end of flex_item1-->
+    <div class="flex_item2">
+        <p style="text-align:center"><u>Slideshow Gallery</u></p>
+
+        <div class="container">
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="images/1.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="images/2.jpg" style="width:100%">
+          </div>
+        
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="images/3.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="images/1.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="images/2.jpg" style="width:100%">
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="images/3.jpg" style="width:100%">
+          </div>
+          
+            
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" src="images/1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="images/2.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>    
+            <div class="column">
+              <img class="demo cursor" src="images/3.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+            </div>
+          </div>
+        </div>
+        
+    </div><!--end of flex_item2-->
+    <div class="flex_item3">
+        <p><u>About Us</u></p>
+        <p class="news">
+           About us goes here!
+    </p>   
+    </div><!--end of flex_item3-->
+
+    </div><!--end of flex_container-->
+    
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+            
+        
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/Style.css"> 
+        <title>Calculator</title>
+        <script>
+                function clearValues (){
+                    var x = calculator.display.value=null
+                   return x ;
+                }
+
+                function evaluateVal (){
+                     x = calculator.display.value;
+                
+                  res = calculator.display.value= eval(x)
+                  if (isNaN(x)){
+                    return calculator.display.value=err
+                  }
+                  return res;
+                  
+                    
+                }
+
+        </script>
+    </head>
+        <body>
+            <div>
+            <form  name="calculator">
+               <input type="text" name="display" id="display">
+                 <br></br>
+               <input type="button" value="7" onclick="document.forms['calculator']['display'].value+=7"  >
+               <input type="button" value="8" onclick="calculator.display.value+=parseInt(8)" >
+               <input type="button" value="9" onclick="calculator.display.value+=parseInt(9)">
+               <input type="button" value="X" onclick="calculator.display.value+='*'">
+               <br></br>
+               <input type="button" value="4" onclick="calculator.display.value+=parseInt(4)">
+               <input type="button" value="5" onclick="calculator.display.value+=parseInt(5)">
+               <input type="button" value="6" onclick="calculator.display.value+=parseInt(6)">
+               <input type="button" value="-" onclick="calculator.display.value+='-'">
+               <br></br>
+               <input type="button" value="1" onclick="calculator.display.value+=parseInt(1)">
+               <input type="button" value="2" onclick="calculator.display.value+=parseInt(2)">
+               <input type="button" value="3" onclick="calculator.display.value+=parseInt(3)">
+               <input type="button" value="+" onclick="calculator.display.value+='+'">
+               <br></br>
+               <input type="button" value="%" onclick="calculator.display.value+='%'">
+               <input type="button" value="0" onclick="calculator.display.value+=parseInt(0)" >
+               <input type="button" value="/" onclick="calculator.display.value+='/'">
+               <input type="button" value="=" onClick="evaluateVal()">
+               <br>
+               <br>
+               <input type="button" value="Clear" onclick="clearValues()">
+            </form>
+        </div>
+        </body>
+ 
+</html>
